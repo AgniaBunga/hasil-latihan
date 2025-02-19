@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return false">
+        <input type="text" id="nama">
+        <label for="nama">Masukan Nama</label>
+        <input type="number" id="nilai">
+        <label for="nilai">Masukan nilai</label>
+        <button onclick="cek_nilai()">cek nilai</button>
+</form>
+   <div id="hasil"></div>
+   <div id="name"></div>
+   <script>
+            function cek_nilai() {
+            let nilai = document.getElementById('nilai').value
+            let nama = document.getElementById('nama').value
+            if (nilai >= 90) {
+                document.getElementById('hasil').innerHTML = "maka " +nama+ "nilainya A"
+                  } else if (nilai>=80) {
+                document.getElementById('hasil').innerHTML = "maka " +nama+ " nilainya B"
+                  } else if (nilai>=70) {
+                document.getElementById('hasil').innerHTML = "maka " +nama+ "nilainya C"
+                  } else if (nilai>=60) {
+                document.getElementById('hasil').innerHTML = "maka " +nama+ " nilainya D"
+                  } else {
+                document.getElementById('hasil').innerHTML = "maka " +nama+ " nilainya E"
+            }
+        }
+       </script>
+</body>
+</html>
